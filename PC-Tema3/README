@@ -1,0 +1,52 @@
+Oprea Olivia Maria-Magdalena 323CA <opreaolivia73@gmail.com>
+
+!!!AM FOLOSIT LABORATORUL 10 SI FUNCTIILE DIN EL!!!
+
+Programul citeste comanda de la tastatura. 
+Apoi compar pentru a vedea ce comanda este introdusa.
+Programul imi permite sa imi inregistrez utilizatorul, apoi poate sa isi
+dea login, poate sa intre in biblioteca, poate sa vada cartile, poate sa dea 
+logout si exit.
+Am obtinut cookie-ul prin comparare de stringuri la fel si token-ul in helpers.
+
+Functia get_cookie am folosit-o pentru a extrage cookie-ul din raspunsul de la
+login.
+Functia get_token am folosit-o pentru a extrage token-ul din raspunsul de la 
+enter_library.
+
+REGISTER:
+Programul v-a cere datele de audentificare pe care le dorim sa le folosim,
+adica username si parola.
+Programul inregistreaza utilizatorul si trimite un request la server de tipul
+post si asteapta raspunsul.
+
+LOGIN:
+Programul imi cere datele de audentificare si trimite un request la server de
+tipul post si asteapta raspuns ca sunt valide. 
+Programul extrage cookieul sesiunii de conectare.
+
+ENTER_LIBRARY:
+Programul trimite un request de tip get si asteapta raspunsul care intoarce un
+token. Token-ul este apoi extras pentru a putea fi folosit la audentificare.
+
+GET_BOOKS:
+Programul trimite un request de tip get si afiseaza cartile din biblioteca ale
+utilizatorului curent.
+
+GET_BOOK:
+Programul primeste un id si il concatenez la adresa data pentru a crea adresa
+corecta la care sa putem trimite un request de tip get pentru a intoarce
+datele unei carti.
+
+ADD_BOOK:
+Programul primeste toate informatiile despre carte, iar apoi trimite un 
+request de tip post cu aceste aceste informatii.
+
+DELETE_BOOK:
+Programul trimite un request de tip delete si sterge cartea cu id-ul respectiv.
+
+LOGOUT:
+Programul trimite un request de tip get si inchide sesiunea utilizatorului.
+
+EXIT:
+Inchide programul.
