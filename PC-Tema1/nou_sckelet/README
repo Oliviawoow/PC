@@ -1,0 +1,46 @@
+Copyright 2020 Oprea Olivia Maria-Magdalena 323CA <opreaolivia73@gmail.com>
+
+Am ales sa fac totul in C++ si am modificat fisierele pentru a fi in C++,
+deoarece mi se pare mai usor de scris si ma pot folosii de std care mi-a 
+usurat foarte mult munca si am inteles mult mai usor ceea ce scriu.
+
+Functia citire_tabela_rutare imi creaza un vector de hashmap unde pozitia in
+vector este nr de biti de 1 din masca, iar in hashmap avem cheia prefixul si
+valoarea este o pereche cu next_hop si interfata.
+
+Functia citire_tabela_arp citeste tabela arp static si imi face un vector
+de perechi in care retinem IP-ul si MAC-ul.
+
+In ambele functii folosesc functia conversie pentru a converti de la string
+la char ca apoi sa pot converti la int pentru a putea lucra cu ceea ce avem
+in tabele.
+
+Funtia interogare_tabela_de_rutare imi cauta in in vector de la cea mai mare
+pozitie, adica cea mai mare masca, cheia, adica masca & ip-ul destinatie, iar
+daca nu gaseste cheia o sa shiftam masca cu o pozitie la stanga pentru a cauta
+cu alta masca si tot asa. Daca nu s-a gasit vom intoarce o pereche nula.
+
+Functia ip_checksum este luata din laboratorul 4 si verifica suma, adica nu
+cred ca trebuie sa explic si functia asta.
+
+In main, vom citii cele 2 tabele, iar apoi dupa ce luam ip-ul destinatiei cu
+alta bucata de cod luata din laboratorul 4, vom face checksum-ul pentru a 
+verifica daca nu au aparut erori la transmiterea packetului. Verificam si
+TTL-ul ca sa vedem ca nu a ramas blocat pachetul. Interogam tablela de rutare
+pentru a gasii urmatorul hop, iar daca este gasit vom salva next_hop si 
+interfata. Cautam adresa MAC corespunzatoare in tabela arp care sa se potriveasca
+cu adresa urmatorului hop, iar dupa ce o gasim o convertim la char ca sa o putem
+folosii. Setam Ethernet header-ul si trimitem pachetul asa cum am vazut ca se facea
+in laboratorul 4 :)
+
+In conluzie, tema aceasta a fost EXTREM de grea, nu mi se pare adecvata pentru
+cunostintele noastre si sincer eu fara ajutorul mai multor colegi nu as fii inteles
+absolut deloc cum se face aceasta tema si nu mi se pare ca am ramas cu vreo cunostinta
+nou dupa ce am facut tema aceeasta. Checkerul local nici macar nu merge(cel putin mie
+si la juma de grupa), au fost probleme imense si cu vmchecker cu rezultate diferite fata
+de local si tot asa si cu prea putine lamuriri la ceea ce inseamna cum se rezolva tema.
+Sper ca in viitor o sa fie temele mai okay, deoarece daca observati nu sunt foarte multi
+care au reusit sa realizeze tema, si cei care au facut tema sigur nu au facut singuri.
+Va multumesc pentru timpul acordat si sper sa conteze acest feedback in viitor, mai ales
+ca vorbesc in numele unei grupe intregi, dintre care majoritatea nici nu au putut sa faca
+tema sau laboratoarele pe care nu le pot intelege. Multumesc.
